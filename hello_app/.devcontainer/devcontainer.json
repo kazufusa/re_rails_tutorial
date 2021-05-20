@@ -1,0 +1,32 @@
+{
+  "name": "hello_app",
+  "dockerComposeFile": "../docker-compose.yml",
+  "workspaceFolder": "/usr/src/app",
+  "service": "app",
+  "extensions": [
+    "rebornix.Ruby",
+    "castwide.solargraph",
+    "kaiwood.endwise"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "[ruby]": {
+      "editor.defaultFormatter": "castwide.solargraph",
+    },
+    "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
+    "solargraph.diagnostics": true,
+    "solargraph.autoformat": true,
+    "solargraph.completion": true,
+    "solargraph.definitions": true,
+    "solargraph.formatting": true,
+    "solargraph.hover": true,
+    "solargraph.references": true,
+    "solargraph.useBundler": false,
+    "solargraph.symbols": true,
+    "solargraph.rename": true,
+    "solargraph.logLevel": "debug",
+    "ruby.useBundler": true,
+    "ruby.pathToBundler": "/usr/local/bin/bundle"
+  },
+  "shutdownAction": "stopCompose"
+}
