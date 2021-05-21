@@ -6,7 +6,10 @@
   "extensions": [
     "rebornix.Ruby",
     "castwide.solargraph",
-    "kaiwood.endwise"
+    "kaiwood.endwise",
+    "hridoy.rails-snippets",
+    "aki77.rails-db-schema",
+    "jduponchelle.rainbow-end"
   ],
   "settings": {
     "editor.formatOnSave": true,
