@@ -14,8 +14,13 @@ services:
       - /usr/src/app/tmp
     working_dir:
       /usr/src/app
+    entrypoint: ["/opt/bin/entrypoint.sh"]
     command: >
       bash -c 'bundle config set --local path "/bundle" && bundle install && ./bin/rails s -b "0.0.0.0"'
+    environment:
+      HOST_USER: $USER
+      HOST_UID: $UID
+      HOST_GID: $GID
 
 volumes:
   bundle:
