@@ -16,7 +16,7 @@ services:
       /usr/src/app
     entrypoint: ["/opt/bin/entrypoint.sh"]
     command: >
-      bash -c 'tail -f /dev/null'
+      bash -c 'bundle config set --local path "/bundle" && tail -f /dev/null'
     environment:
       HOST_USER: $USER
       HOST_UID: $UID
