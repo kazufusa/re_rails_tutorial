@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./
+    ports:
+     - '3000:3000'
+    volumes:
+      - ./:/usr/src/app
+      - bundle:/bundle
+      - node_modules:/usr/src/app/node_modules
+    tmpfs:
+      - /usr/src/app/tmp:mode=1777
+    working_dir:
+      /usr/src/app
+    entrypoint: ["/usr/src/app/.devcontainer/entrypoint.sh"]
+    command: >
+      bash -xc 'bundle config set --local path "/bundle" && bundle install && yarn && tail -f /dev/null'
+    environment:
+      HOST_USER: $USER
+      HOST_UID: $UID
+      HOST_GID: $GID
+
+volumes:
+  bundle:
+  node_modules:

@@ -1,0 +1,36 @@
+{
+  "name": "sample_app",
+  "dockerComposeFile": "../docker-compose.yml",
+  "workspaceFolder": "/usr/src/app",
+  "service": "app",
+  "remoteUser": "developer",
+  "extensions": [
+    "rebornix.Ruby",
+    "castwide.solargraph",
+    "kaiwood.endwise",
+    "hridoy.rails-snippets",
+    "aki77.rails-db-schema",
+    "jduponchelle.rainbow-end"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "[ruby]": {
+      "editor.defaultFormatter": "castwide.solargraph",
+    },
+    "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
+    "solargraph.diagnostics": true,
+    "solargraph.autoformat": true,
+    "solargraph.completion": true,
+    "solargraph.definitions": true,
+    "solargraph.formatting": true,
+    "solargraph.hover": true,
+    "solargraph.references": true,
+    "solargraph.useBundler": false,
+    "solargraph.symbols": true,
+    "solargraph.rename": true,
+    "solargraph.logLevel": "debug",
+    "ruby.useBundler": true,
+    "ruby.pathToBundler": "/usr/local/bin/bundle"
+  },
+  "shutdownAction": "stopCompose"
+}
